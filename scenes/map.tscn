@@ -1,0 +1,39 @@
+[gd_scene load_steps=4 format=3 uid="uid://bal334tylhqtu"]
+
+[ext_resource type="Texture2D" uid="uid://bcrcabf0ji02x" path="res://asset/map/map.png" id="1_crs8x"]
+[ext_resource type="Texture2D" uid="uid://cjo2cu3lw2kb2" path="res://asset/map/middle.png" id="2_e5cpc"]
+[ext_resource type="Texture2D" uid="uid://cecmxhkrvu3v2" path="res://asset/map/cloud.png" id="3_8g7pu"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer(cielo)" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer(cielo)"]
+texture_filter = 1
+position = Vector2(-31, -1639)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_crs8x")
+centered = false
+
+[node name="ParallaxLayer2(monti)" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(98, -340)
+motion_scale = Vector2(0.2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2(monti)"]
+texture_filter = 1
+position = Vector2(843, -684)
+scale = Vector2(2, 2)
+texture = ExtResource("2_e5cpc")
+
+[node name="ParallaxLayer3(nuvole)" type="ParallaxLayer" parent="ParallaxBackground"]
+position = Vector2(98, -340)
+motion_scale = Vector2(0.3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3(nuvole)"]
+texture_filter = 1
+position = Vector2(1095, -537)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_8g7pu")
