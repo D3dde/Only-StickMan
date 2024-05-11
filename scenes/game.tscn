@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://cnd3cdrboypll"]
+[gd_scene load_steps=31 format=3 uid="uid://cnd3cdrboypll"]
 
 [ext_resource type="PackedScene" uid="uid://bal334tylhqtu" path="res://scenes/map.tscn" id="1_3mo61"]
 [ext_resource type="PackedScene" uid="uid://b5p6v0fuwhqtb" path="res://scenes/character.tscn" id="1_etlkc"]
@@ -20,6 +20,7 @@
 [ext_resource type="Script" path="res://scenes/Area2D4.gd" id="16_7vmlp"]
 [ext_resource type="Script" path="res://scenes/Area2D2.gd" id="16_pxyip"]
 [ext_resource type="Script" path="res://scenes/Area2D3.gd" id="19_rlw2u"]
+[ext_resource type="Script" path="res://scenes/Record.gd" id="21_fd7qp"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nk5co"]
 texture = ExtResource("3_1ub6h")
@@ -257,38 +258,49 @@ anchor_left = -0.066
 anchor_top = -0.096
 anchor_right = -0.066
 anchor_bottom = -0.096
-offset_left = 3809.03
-offset_top = -1442.79
-offset_right = 3887.03
-offset_bottom = -1421.79
+offset_left = 3573.03
+offset_top = -1504.79
+offset_right = 3653.03
+offset_bottom = -1466.79
 script = ExtResource("15_vumq7")
 
 [node name="Minutes" type="Label" parent="UI/CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 25.0
-offset_bottom = 22.0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 26.0
+offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="Seconds" type="Label" parent="UI/CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 25.0
-offset_top = -1.0
-offset_right = 48.0
-offset_bottom = 22.0
+offset_left = 26.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
+vertical_alignment = 2
 
 [node name="Msecs" type="Label" parent="UI/CanvasLayer/Panel"]
 layout_mode = 0
-offset_left = 48.0
-offset_top = -1.0
-offset_right = 76.0
-offset_bottom = 22.0
+offset_left = 49.0
+offset_top = 15.0
+offset_right = 77.0
+offset_bottom = 38.0
 text = "000"
 horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label" type="Label" parent="UI/CanvasLayer/Panel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 61.0
+offset_bottom = 21.0
+text = "current"
 
 [node name="Area2D" type="Area2D" parent="UI/CanvasLayer"]
 collision_mask = 2
@@ -298,68 +310,6 @@ script = ExtResource("16_pxyip")
 position = Vector2(3626, -1469)
 shape = SubResource("SegmentShape2D_0ij1l")
 
-[node name="last" type="Panel" parent="UI/CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Minutes" type="Label" parent="UI/CanvasLayer/last"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 25.0
-offset_bottom = 22.0
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds" type="Label" parent="UI/CanvasLayer/last"]
-layout_mode = 0
-offset_left = 25.0
-offset_top = -1.0
-offset_right = 48.0
-offset_bottom = 22.0
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Msecs" type="Label" parent="UI/CanvasLayer/last"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = -1.0
-offset_right = 76.0
-offset_bottom = 22.0
-text = "000"
-horizontal_alignment = 2
-
-[node name="record" type="Panel" parent="UI/CanvasLayer"]
-offset_right = 40.0
-offset_bottom = 40.0
-
-[node name="Minutes" type="Label" parent="UI/CanvasLayer/record"]
-layout_mode = 0
-offset_left = 2.0
-offset_top = -1.0
-offset_right = 25.0
-offset_bottom = 22.0
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Seconds" type="Label" parent="UI/CanvasLayer/record"]
-layout_mode = 0
-offset_left = 25.0
-offset_top = -1.0
-offset_right = 48.0
-offset_bottom = 22.0
-text = "00:"
-horizontal_alignment = 2
-
-[node name="Msecs" type="Label" parent="UI/CanvasLayer/record"]
-layout_mode = 0
-offset_left = 48.0
-offset_top = -1.0
-offset_right = 76.0
-offset_bottom = 22.0
-text = "000"
-horizontal_alignment = 2
-
 [node name="Area2D2" type="Area2D" parent="UI/CanvasLayer"]
 collision_mask = 2
 script = ExtResource("19_rlw2u")
@@ -368,8 +318,59 @@ script = ExtResource("19_rlw2u")
 position = Vector2(1408, -242)
 shape = SubResource("SegmentShape2D_gld0d")
 
+[node name="Record" type="Panel" parent="UI/CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.066
+anchor_top = -0.096
+anchor_right = -0.066
+anchor_bottom = -0.096
+offset_left = 3573.03
+offset_top = -1546.79
+offset_right = 3653.03
+offset_bottom = -1508.79
+script = ExtResource("21_fd7qp")
+
+[node name="Minutes" type="Label" parent="UI/CanvasLayer/Record"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 15.0
+offset_right = 26.0
+offset_bottom = 38.0
+text = "00:"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Seconds" type="Label" parent="UI/CanvasLayer/Record"]
+layout_mode = 0
+offset_left = 26.0
+offset_top = 15.0
+offset_right = 49.0
+offset_bottom = 38.0
+text = "00:"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Msecs" type="Label" parent="UI/CanvasLayer/Record"]
+layout_mode = 0
+offset_left = 49.0
+offset_top = 15.0
+offset_right = 77.0
+offset_bottom = 38.0
+text = "000"
+horizontal_alignment = 2
+vertical_alignment = 2
+
+[node name="Label" type="Label" parent="UI/CanvasLayer/Record"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = -2.0
+offset_right = 61.0
+offset_bottom = 21.0
+text = "record"
+
 [connection signal="body_entered" from="ostacoli/items/StaticBody2D2/Area2D" to="ostacoli/items/StaticBody2D2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="ostacoli/items/StaticBody2D8/Area2D" to="ostacoli/items/StaticBody2D8/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="UI/CanvasLayer/Area2D" to="UI/CanvasLayer/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="UI/CanvasLayer/Area2D" to="UI/CanvasLayer/Record" method="_on_area_2d_body_entered"]
 [connection signal="body_entered" from="UI/CanvasLayer/Area2D2" to="UI/CanvasLayer/Panel" method="_on_area_2d_2_body_entered"]
 [connection signal="body_entered" from="UI/CanvasLayer/Area2D2" to="UI/CanvasLayer/Area2D2" method="_on_body_entered"]
