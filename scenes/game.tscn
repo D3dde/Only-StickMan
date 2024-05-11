@@ -204,7 +204,7 @@ position = Vector2(211, -64)
 texture = ExtResource("10_gr52h")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ostacoli/items/StaticBody2D6"]
-polygon = PackedVector2Array(183, -74, 192, -85, 227, -85, 239.5, -76, 239.5, -49, 235.5, -37.5, 227.5, -37.5, 218.5, -59.5, 203.5, -59.5, 195, -38.5, 188, -38, 183, -52.5)
+polygon = PackedVector2Array(183, -74, 192, -85, 227, -85, 239.5, -76, 239.5, -49, 235.5, -37.5, 227.5, -37, 218.5, -59.5, 203.5, -59.5, 195, -38.5, 188, -38, 183, -52.5)
 
 [node name="StaticBody2D7" type="StaticBody2D" parent="ostacoli/items"]
 
