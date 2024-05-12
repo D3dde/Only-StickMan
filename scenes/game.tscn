@@ -240,19 +240,19 @@ script = ExtResource("16_7vmlp")
 position = Vector2(3813, -1339)
 shape = SubResource("SegmentShape2D_iy1b0")
 
-[node name="UI" type="Node" parent="."]
+[node name="UIstatic" type="Node" parent="."]
 
-[node name="commands" type="Sprite2D" parent="UI"]
+[node name="commands" type="Sprite2D" parent="UIstatic"]
 texture_filter = 1
 position = Vector2(-66, -192)
 scale = Vector2(5, 5)
 texture = ExtResource("4_grarm")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="UI"]
+[node name="CanvasLayer" type="CanvasLayer" parent="UIstatic"]
 layer = 0
 follow_viewport_enabled = true
 
-[node name="Panel" type="Panel" parent="UI/CanvasLayer"]
+[node name="Panel" type="Panel" parent="UIstatic/CanvasLayer"]
 anchors_preset = -1
 anchor_left = -0.066
 anchor_top = -0.096
@@ -264,7 +264,7 @@ offset_right = 3653.03
 offset_bottom = -1466.79
 script = ExtResource("15_vumq7")
 
-[node name="Minutes" type="Label" parent="UI/CanvasLayer/Panel"]
+[node name="Minutes" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 15.0
@@ -274,7 +274,7 @@ text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Seconds" type="Label" parent="UI/CanvasLayer/Panel"]
+[node name="Seconds" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 15.0
@@ -284,7 +284,7 @@ text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Msecs" type="Label" parent="UI/CanvasLayer/Panel"]
+[node name="Msecs" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 15.0
@@ -294,7 +294,7 @@ text = "000"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Label" type="Label" parent="UI/CanvasLayer/Panel"]
+[node name="Label" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = -2.0
@@ -302,23 +302,23 @@ offset_right = 61.0
 offset_bottom = 21.0
 text = "current"
 
-[node name="Area2D" type="Area2D" parent="UI/CanvasLayer"]
+[node name="Area2D" type="Area2D" parent="UIstatic/CanvasLayer"]
 collision_mask = 2
 script = ExtResource("16_pxyip")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/CanvasLayer/Area2D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UIstatic/CanvasLayer/Area2D"]
 position = Vector2(3626, -1469)
 shape = SubResource("SegmentShape2D_0ij1l")
 
-[node name="Area2D2" type="Area2D" parent="UI/CanvasLayer"]
+[node name="Area2D2" type="Area2D" parent="UIstatic/CanvasLayer"]
 collision_mask = 2
 script = ExtResource("19_rlw2u")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="UI/CanvasLayer/Area2D2"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="UIstatic/CanvasLayer/Area2D2"]
 position = Vector2(1408, -242)
 shape = SubResource("SegmentShape2D_gld0d")
 
-[node name="Record" type="Panel" parent="UI/CanvasLayer"]
+[node name="Record" type="Panel" parent="UIstatic/CanvasLayer"]
 anchors_preset = -1
 anchor_left = -0.066
 anchor_top = -0.096
@@ -330,7 +330,7 @@ offset_right = 3653.03
 offset_bottom = -1508.79
 script = ExtResource("21_fd7qp")
 
-[node name="Minutes" type="Label" parent="UI/CanvasLayer/Record"]
+[node name="Minutes" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = 15.0
@@ -340,7 +340,7 @@ text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Seconds" type="Label" parent="UI/CanvasLayer/Record"]
+[node name="Seconds" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
 offset_left = 26.0
 offset_top = 15.0
@@ -350,7 +350,7 @@ text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Msecs" type="Label" parent="UI/CanvasLayer/Record"]
+[node name="Msecs" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
 offset_left = 49.0
 offset_top = 15.0
@@ -360,7 +360,7 @@ text = "000"
 horizontal_alignment = 2
 vertical_alignment = 2
 
-[node name="Label" type="Label" parent="UI/CanvasLayer/Record"]
+[node name="Label" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
 offset_left = 3.0
 offset_top = -2.0
@@ -370,7 +370,7 @@ text = "record"
 
 [connection signal="body_entered" from="ostacoli/items/StaticBody2D2/Area2D" to="ostacoli/items/StaticBody2D2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="ostacoli/items/StaticBody2D8/Area2D" to="ostacoli/items/StaticBody2D8/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="UI/CanvasLayer/Area2D" to="UI/CanvasLayer/Area2D" method="_on_body_entered"]
-[connection signal="body_entered" from="UI/CanvasLayer/Area2D" to="UI/CanvasLayer/Record" method="_on_area_2d_body_entered"]
-[connection signal="body_entered" from="UI/CanvasLayer/Area2D2" to="UI/CanvasLayer/Panel" method="_on_area_2d_2_body_entered"]
-[connection signal="body_entered" from="UI/CanvasLayer/Area2D2" to="UI/CanvasLayer/Area2D2" method="_on_body_entered"]
+[connection signal="body_entered" from="UIstatic/CanvasLayer/Area2D" to="UIstatic/CanvasLayer/Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="UIstatic/CanvasLayer/Area2D" to="UIstatic/CanvasLayer/Record" method="_on_area_2d_body_entered"]
+[connection signal="body_entered" from="UIstatic/CanvasLayer/Area2D2" to="UIstatic/CanvasLayer/Panel" method="_on_area_2d_2_body_entered"]
+[connection signal="body_entered" from="UIstatic/CanvasLayer/Area2D2" to="UIstatic/CanvasLayer/Area2D2" method="_on_body_entered"]

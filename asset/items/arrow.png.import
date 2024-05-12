@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w8lbf8pyuwng"
-path="res://.godot/imported/_JumpFallInbetween.png-a1e0c2e40adc6bbcdc09da0a8e3ac483.ctex"
+uid="uid://civ1cqh6vwvt4"
+path="res://.godot/imported/arrow.png-b2bc493c7b237ca58585fa897650dc87.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/120x80_PNGSheets/_JumpFallInbetween.png"
-dest_files=["res://.godot/imported/_JumpFallInbetween.png-a1e0c2e40adc6bbcdc09da0a8e3ac483.ctex"]
+source_file="res://asset/items/arrow.png"
+dest_files=["res://.godot/imported/arrow.png-b2bc493c7b237ca58585fa897650dc87.ctex"]
 
 [params]
 

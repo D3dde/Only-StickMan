@@ -1,12 +1,13 @@
-[gd_scene load_steps=38 format=3 uid="uid://b5p6v0fuwhqtb"]
+[gd_scene load_steps=39 format=3 uid="uid://b5p6v0fuwhqtb"]
 
 [ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="1_4n1g2"]
-[ext_resource type="Texture2D" uid="uid://7j342arbaimq" path="res://asset/120x80_PNGSheets/_Run.png" id="2_r1g5d"]
-[ext_resource type="Texture2D" uid="uid://c03mavluriywd" path="res://asset/120x80_PNGSheets/_Idle.png" id="3_ueuow"]
-[ext_resource type="Texture2D" uid="uid://d363n2rl76lj0" path="res://asset/120x80_PNGSheets/_Jump.png" id="4_hfhb8"]
-[ext_resource type="Texture2D" uid="uid://w8lbf8pyuwng" path="res://asset/120x80_PNGSheets/_JumpFallInbetween.png" id="5_quo30"]
-[ext_resource type="Texture2D" uid="uid://cbd1vfdug0ugt" path="res://asset/120x80_PNGSheets/_Fall.png" id="6_nm62m"]
+[ext_resource type="Texture2D" uid="uid://7j342arbaimq" path="res://asset/stickman/_Run.png" id="2_r1g5d"]
+[ext_resource type="Texture2D" uid="uid://c03mavluriywd" path="res://asset/stickman/_Idle.png" id="3_ueuow"]
+[ext_resource type="Texture2D" uid="uid://d363n2rl76lj0" path="res://asset/stickman/_Jump.png" id="4_hfhb8"]
+[ext_resource type="Texture2D" uid="uid://w8lbf8pyuwng" path="res://asset/stickman/_JumpFallInbetween.png" id="5_quo30"]
+[ext_resource type="Texture2D" uid="uid://cbd1vfdug0ugt" path="res://asset/stickman/_Fall.png" id="6_nm62m"]
 [ext_resource type="Script" path="res://scenes/character.tres.gd" id="7_kludw"]
+[ext_resource type="PackedScene" uid="uid://g1ja7i3anvtj" path="res://scenes/mobileControl.tscn" id="8_1x11f"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4rjh"]
 radius = 8.0
@@ -257,3 +258,5 @@ limit_right = 5170
 limit_bottom = 0
 limit_smoothed = true
 script = ExtResource("7_kludw")
+
+[node name="CanvasLayer" parent="." instance=ExtResource("8_1x11f")]

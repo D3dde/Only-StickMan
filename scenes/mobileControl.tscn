@@ -1,0 +1,36 @@
+[gd_scene load_steps=4 format=3 uid="uid://g1ja7i3anvtj"]
+
+[ext_resource type="Texture2D" uid="uid://civ1cqh6vwvt4" path="res://asset/items/arrow.png" id="1_rhp1l"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uu10p"]
+radius = 20.0
+height = 60.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_044mm"]
+radius = 19.57
+height = 53.06
+
+[node name="CanvasLayer" type="CanvasLayer"]
+
+[node name="TouchScreenButton" type="TouchScreenButton" parent="."]
+position = Vector2(1117, 492)
+rotation = 1.5708
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_rhp1l")
+shape = SubResource("CapsuleShape2D_uu10p")
+action = "destra"
+
+[node name="TouchScreenButton2" type="TouchScreenButton" parent="."]
+position = Vector2(820, 620)
+rotation = 4.71239
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_rhp1l")
+shape = SubResource("CapsuleShape2D_uu10p")
+action = "sinistra"
+
+[node name="TouchScreenButton3" type="TouchScreenButton" parent="."]
+position = Vector2(57, 492)
+scale = Vector2(2, 2)
+texture_normal = ExtResource("1_rhp1l")
+shape = SubResource("CapsuleShape2D_044mm")
+action = "salto"

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cbd1vfdug0ugt"
-path="res://.godot/imported/_Fall.png-71eaffad0463e32c209e5de739e9ee63.ctex"
+uid="uid://7j342arbaimq"
+path="res://.godot/imported/_Run.png-02c82ea8843f67186cb8bd76513eaa18.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://asset/120x80_PNGSheets/_Fall.png"
-dest_files=["res://.godot/imported/_Fall.png-71eaffad0463e32c209e5de739e9ee63.ctex"]
+source_file="res://asset/stickman/_Run.png"
+dest_files=["res://.godot/imported/_Run.png-02c82ea8843f67186cb8bd76513eaa18.ctex"]
 
 [params]
 
