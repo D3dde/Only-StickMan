@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://cnd3cdrboypll"]
+[gd_scene load_steps=32 format=3 uid="uid://cnd3cdrboypll"]
 
 [ext_resource type="PackedScene" uid="uid://bal334tylhqtu" path="res://scenes/map.tscn" id="1_3mo61"]
 [ext_resource type="PackedScene" uid="uid://b5p6v0fuwhqtb" path="res://scenes/character.tscn" id="1_etlkc"]
@@ -19,6 +19,7 @@
 [ext_resource type="Script" path="res://scenes/Panel.gd" id="15_vumq7"]
 [ext_resource type="Script" path="res://scenes/Area2D4.gd" id="16_7vmlp"]
 [ext_resource type="Script" path="res://scenes/Area2D2.gd" id="16_pxyip"]
+[ext_resource type="Texture2D" uid="uid://1goyqshp830b" path="res://asset/items/mountain.png" id="17_hjvhf"]
 [ext_resource type="Script" path="res://scenes/Area2D3.gd" id="19_rlw2u"]
 [ext_resource type="Script" path="res://scenes/Record.gd" id="21_fd7qp"]
 
@@ -239,6 +240,32 @@ script = ExtResource("16_7vmlp")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="ostacoli/items/StaticBody2D8/Area2D"]
 position = Vector2(3813, -1339)
 shape = SubResource("SegmentShape2D_iy1b0")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="ostacoli"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="ostacoli/StaticBody2D2"]
+polygon = PackedVector2Array(3792, -42, 3943, -208, 3948, -226, 3988, -285, 4019, -451, 4047, -500, 4091, -535, 4143, -654, 4250, -758, 4286, -786, 4292, -822, 4352, -873, 4377, -942, 4416, -993, 4483, -1078, 4488, -1100, 4553, -1164, 4609, -1227, 4625, -1229, 4628, -1247, 4706, -1314, 4751, -1381, 4806, -1407, 4824, -1443, 4898, -1502, 4897, -27)
+
+[node name="Sprite2D" type="Sprite2D" parent="ostacoli/StaticBody2D2"]
+position = Vector2(4131, -810)
+scale = Vector2(3, 3)
+texture = ExtResource("17_hjvhf")
+
+[node name="Label" type="Label" parent="ostacoli/StaticBody2D2"]
+modulate = Color(0.466181, 0.466181, 0.466181, 1)
+offset_left = 4235.0
+offset_top = -676.0
+offset_right = 4323.0
+offset_bottom = -653.0
+text = "you tried : )"
+
+[node name="Label2" type="Label" parent="ostacoli/StaticBody2D2"]
+modulate = Color(0.940294, 0.762245, 0.163144, 1)
+offset_left = 3890.0
+offset_top = -115.0
+offset_right = 4022.0
+offset_bottom = -92.0
+text = "Work in progress"
 
 [node name="UIstatic" type="Node" parent="."]
 
