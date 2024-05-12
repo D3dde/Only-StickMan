@@ -6,7 +6,7 @@
 [ext_resource type="Texture2D" uid="uid://hp1hvblcuhnd" path="res://asset/map/ui.png" id="4_grarm"]
 [ext_resource type="Texture2D" uid="uid://b6t7v1pbw8mjw" path="res://asset/items/Senza nome.png" id="4_s1g3n"]
 [ext_resource type="Texture2D" uid="uid://cy7hrtcxmvkx3" path="res://asset/items/barca.png" id="5_kinsp"]
-[ext_resource type="Texture2D" uid="uid://dvm45jicdxlyo" path="res://asset/items/.png" id="6_c5iwq"]
+[ext_resource type="Texture2D" uid="uid://dvm45jicdxlyo" path="res://asset/items/piramid.png" id="6_c5iwq"]
 [ext_resource type="Texture2D" uid="uid://twhfv8l3ssoc" path="res://asset/items/trampolino.png" id="7_leoid"]
 [ext_resource type="Script" path="res://scenes/Area2D.gd" id="8_4exrk"]
 [ext_resource type="Texture2D" uid="uid://cbjfmyu2ee6h8" path="res://asset/items/dino.png" id="9_0ohop"]
