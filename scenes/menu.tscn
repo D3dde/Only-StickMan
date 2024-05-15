@@ -1,0 +1,43 @@
+[gd_scene load_steps=4 format=3 uid="uid://ceuu8pke057td"]
+
+[ext_resource type="Script" path="res://scenes/LevelSelect.gd" id="1_b7smp"]
+[ext_resource type="Texture2D" uid="uid://ctjlk6rel8g5b" path="res://asset/Sprite-0001.png" id="1_un4xa"]
+[ext_resource type="Script" path="res://scenes/Start.gd" id="2_66c3g"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 105.0
+offset_top = 81.0
+offset_right = 365.0
+offset_bottom = 147.0
+grow_vertical = 2
+
+[node name="LevelSelect" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Level Select"
+script = ExtResource("1_b7smp")
+
+[node name="Start" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Start"
+script = ExtResource("2_66c3g")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(575, 334)
+scale = Vector2(3.7, 3.7)
+texture = ExtResource("1_un4xa")
+
+[connection signal="pressed" from="VBoxContainer/LevelSelect" to="VBoxContainer/LevelSelect" method="_on_pressed"]
+[connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]

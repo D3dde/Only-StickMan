@@ -11,9 +11,13 @@ config_version=5
 [application]
 
 config/name="Only StickMan!"
-run/main_scene="res://scenes/game.tscn"
+run/main_scene="res://scenes/menu.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*res://scenes/Global.gd"
 
 [display]
 
