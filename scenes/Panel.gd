@@ -25,7 +25,7 @@ func get_time_formatted() -> String:
 
 
 
-func _on_area_2d_2_body_entered(body):
+func _on_area_2d_2_body_entered(_body):
 	time=0
 	msec=0
 	seconds=0

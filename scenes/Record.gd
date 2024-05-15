@@ -15,7 +15,7 @@ func stop() -> void:
 	
 
 
-func _on_area_2d_body_entered(body):
+func _on_area_2d_body_entered(_body):
 	var time2: float = timer.time
 	var minutes2: int = timer.minutes
 	var seconds2: int = timer.seconds

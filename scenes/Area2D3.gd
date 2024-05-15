@@ -7,5 +7,5 @@ func _ready():
 
 
 
-func _on_body_entered(body):
+func _on_body_entered(_body):
 	timer.set_process(true)
