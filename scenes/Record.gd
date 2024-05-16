@@ -1,6 +1,6 @@
 extends Panel
 @onready var timer=get_node("../Panel")
-var time: float = 999999999999999999999.99
+var time: float = 86400.00
 var minutes: int = 0
 var seconds: int = 0
 var msec: int = 0
