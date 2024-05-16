@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6hc0i23ipqhw"]
+
+[ext_resource type="Texture2D" uid="uid://bvyyfda1bqsbe" path="res://asset/lvl2map/sky.png" id="1_uu6ny"]
+[ext_resource type="Texture2D" uid="uid://cs0e415mbp0vf" path="res://asset/lvl2map/saturn.png" id="2_4g5fj"]
+[ext_resource type="Texture2D" uid="uid://dg0wdlfq6yree" path="res://asset/lvl2map/moon.png" id="3_b15x3"]
+
+[node name="maplvl2" type="Node2D"]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.1, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+position = Vector2(738, -771)
+scale = Vector2(1.6, 1.6)
+texture = ExtResource("1_uu6ny")
+
+[node name="ParallaxLayer2" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.2, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer2"]
+position = Vector2(1000, -1079)
+scale = Vector2(2, 2)
+texture = ExtResource("2_4g5fj")
+
+[node name="ParallaxLayer3" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_scale = Vector2(0.3, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer3"]
+position = Vector2(1191, -1292)
+scale = Vector2(2.5, 2.5)
+texture = ExtResource("3_b15x3")

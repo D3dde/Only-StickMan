@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://ceuu8pke057td"]
+[gd_scene load_steps=5 format=3 uid="uid://ceuu8pke057td"]
 
 [ext_resource type="Script" path="res://scenes/LevelSelect.gd" id="1_b7smp"]
 [ext_resource type="Texture2D" uid="uid://ctjlk6rel8g5b" path="res://asset/Sprite-0001.png" id="1_un4xa"]
 [ext_resource type="Script" path="res://scenes/Start.gd" id="2_66c3g"]
+[ext_resource type="Script" path="res://scenes/HBoxContainer.gd" id="4_06u6r"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -39,5 +40,23 @@ position = Vector2(575, 334)
 scale = Vector2(3.7, 3.7)
 texture = ExtResource("1_un4xa")
 
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+layout_mode = 0
+offset_left = 38.0
+offset_top = 410.0
+offset_right = 440.0
+offset_bottom = 450.0
+script = ExtResource("4_06u6r")
+
+[node name="lvl1" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Level 1 (Earth)"
+
+[node name="lvl2" type="Button" parent="HBoxContainer"]
+layout_mode = 2
+text = "Level 2 (Moon) WORK IN PROGRESS"
+
 [connection signal="pressed" from="VBoxContainer/LevelSelect" to="VBoxContainer/LevelSelect" method="_on_pressed"]
 [connection signal="pressed" from="VBoxContainer/Start" to="VBoxContainer/Start" method="_on_pressed"]
+[connection signal="pressed" from="HBoxContainer/lvl1" to="HBoxContainer" method="_on_lvl_1_pressed"]
+[connection signal="pressed" from="HBoxContainer/lvl2" to="HBoxContainer" method="_on_lvl_2_pressed"]
