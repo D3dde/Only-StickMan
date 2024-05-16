@@ -2,4 +2,4 @@ extends Area2D
 
 
 func _on_body_entered(body):
-	body.position = Vector2(-75,-62)
+	body.position = Vector2(0,-62)

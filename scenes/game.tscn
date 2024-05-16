@@ -99,7 +99,7 @@ b = Vector2(-1, 10)
 position = Vector2(-18, -82)
 
 [node name="character" parent="." instance=ExtResource("1_etlkc")]
-position = Vector2(-75, -62)
+position = Vector2(-74, -62)
 
 [node name="ostacoli" type="Node" parent="."]
 

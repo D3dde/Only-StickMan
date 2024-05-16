@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=3 uid="uid://b5p6v0fuwhqtb"]
+[gd_scene load_steps=40 format=3 uid="uid://b5p6v0fuwhqtb"]
 
 [ext_resource type="Script" path="res://scenes/CharacterBody2D.gd" id="1_4n1g2"]
 [ext_resource type="Texture2D" uid="uid://7j342arbaimq" path="res://asset/stickman/_Run.png" id="2_r1g5d"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cbd1vfdug0ugt" path="res://asset/stickman/_Fall.png" id="6_nm62m"]
 [ext_resource type="Script" path="res://scenes/character.tres.gd" id="7_kludw"]
 [ext_resource type="PackedScene" uid="uid://g1ja7i3anvtj" path="res://scenes/mobileControl.tscn" id="8_1x11f"]
+[ext_resource type="PackedScene" uid="uid://cseiho2h6eper" path="res://scenes/pause.tscn" id="9_vgl23"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_v4rjh"]
 radius = 8.0
@@ -260,3 +261,6 @@ limit_smoothed = true
 script = ExtResource("7_kludw")
 
 [node name="CanvasLayer" parent="." instance=ExtResource("8_1x11f")]
+
+[node name="pause" parent="." instance=ExtResource("9_vgl23")]
+visible = false

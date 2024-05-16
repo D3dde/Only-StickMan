@@ -8,6 +8,7 @@ var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
 
 func _physics_process(delta):
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 	
@@ -34,6 +35,6 @@ func _physics_process(delta):
 			an.play("camminata")
 		else:
 			an.play("idle")
-	
-	
 	move_and_slide()
+	if Input.is_action_just_pressed("menu"):
+		$"../pause".show()

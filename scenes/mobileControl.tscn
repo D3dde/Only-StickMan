@@ -1,14 +1,18 @@
-[gd_scene load_steps=4 format=3 uid="uid://g1ja7i3anvtj"]
+[gd_scene load_steps=6 format=3 uid="uid://g1ja7i3anvtj"]
 
 [ext_resource type="Texture2D" uid="uid://civ1cqh6vwvt4" path="res://asset/items/arrow.png" id="1_rhp1l"]
+[ext_resource type="Texture2D" uid="uid://bi7lxb5bovhpi" path="res://asset/items/menu.png" id="2_s06xq"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_uu10p"]
-radius = 20.0
-height = 60.0
+radius = 32.0
+height = 64.0
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_044mm"]
-radius = 19.57
-height = 53.06
+radius = 32.0
+height = 64.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_y03ue"]
+radius = 15.0
 
 [node name="CanvasLayer" type="CanvasLayer"]
 
@@ -34,3 +38,10 @@ scale = Vector2(2, 2)
 texture_normal = ExtResource("1_rhp1l")
 shape = SubResource("CapsuleShape2D_044mm")
 action = "salto"
+
+[node name="TouchScreenButton4" type="TouchScreenButton" parent="."]
+position = Vector2(32, 32)
+scale = Vector2(3.5, 3.5)
+texture_normal = ExtResource("2_s06xq")
+shape = SubResource("CircleShape2D_y03ue")
+action = "menu"
