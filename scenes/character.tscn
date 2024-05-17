@@ -233,26 +233,25 @@ animations = [{
 "speed": 15.0
 }]
 
-[node name="Node2D" type="Node2D"]
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="."]
+[node name="CharacterBody2D" type="CharacterBody2D"]
 position = Vector2(0, -1)
 collision_layer = 2
 floor_max_angle = 1.05592
 script = ExtResource("1_4n1g2")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="CharacterBody2D"]
-position = Vector2(0, 2)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
 shape = SubResource("CapsuleShape2D_v4rjh")
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D"]
-position = Vector2(0, -19)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -20)
 sprite_frames = SubResource("SpriteFrames_08m5i")
 animation = &"camminata"
 frame_progress = 0.310503
 
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D"]
+[node name="Camera2D" type="Camera2D" parent="."]
 texture_filter = 1
+position = Vector2(0, -1)
 limit_left = -260
 limit_top = -1630
 limit_right = 5170

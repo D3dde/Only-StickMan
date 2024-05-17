@@ -6,6 +6,8 @@ const JUMP_VELOCITY = -400.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 
+func _ready():
+	pass
 
 func _physics_process(delta):
 	
@@ -36,5 +38,7 @@ func _physics_process(delta):
 		else:
 			an.play("idle")
 	move_and_slide()
-	if Input.is_action_just_pressed("menu"):
-		$"../pause".show()
+	if Input.is_action_just_pressed("menu") and $"pause".visible==false:
+		$"pause".show()
+	elif Input.is_action_just_pressed("menu") and $"pause".visible==true:
+		$"pause".hide()

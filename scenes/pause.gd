@@ -9,5 +9,5 @@ func _on_resume_pressed():
 
 
 func _on_restart_pressed():
-	$"../CharacterBody2D".position = Vector2(0,-62)
+	$"..".position = Vector2(0,-70)
 	$".".hide()
