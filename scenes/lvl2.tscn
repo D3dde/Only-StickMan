@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://deomqj3q2cun6"]
+[gd_scene load_steps=14 format=3 uid="uid://deomqj3q2cun6"]
 
 [ext_resource type="PackedScene" uid="uid://b5p6v0fuwhqtb" path="res://scenes/character.tscn" id="1_5pn2v"]
 [ext_resource type="Script" path="res://scenes/lvl2.gd" id="1_12hxp"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://bncyk6hwqdjgs" path="res://asset/items/horse.png" id="4_c3vqs"]
 [ext_resource type="Texture2D" uid="uid://bpuwditn503ai" path="res://asset/items/gayser.png" id="6_man5u"]
 [ext_resource type="Texture2D" uid="uid://c7xwpn3w56e3d" path="res://asset/items/mario.png" id="7_i00xq"]
+[ext_resource type="Texture2D" uid="uid://dve27c6p0a32g" path="res://asset/items/knight.png" id="8_fkm2m"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_lqmif"]
 texture = ExtResource("2_p1tj3")
@@ -145,5 +146,14 @@ texture = ExtResource("7_i00xq")
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="items/StaticBody2D4"]
 polygon = PackedVector2Array(1252, -909, 1264, -921, 1288, -921, 1306, -903, 1306, -885, 1276, -858, 1267, -858, 1252, -873)
+
+[node name="StaticBody2D5" type="StaticBody2D" parent="items"]
+
+[node name="Sprite2D" type="Sprite2D" parent="items/StaticBody2D5"]
+position = Vector2(885, -825)
+texture = ExtResource("8_fkm2m")
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="items/StaticBody2D5"]
+polygon = PackedVector2Array(937, -772, 891, -798, 891, -805, 886, -811, 885, -822, 895, -829, 896, -852, 892, -859, 895, -869, 890, -879, 881, -879, 886, -863, 878, -867, 863, -866, 859, -864, 854, -873, 853, -880, 857, -887, 855, -890, 847, -888, 842, -873, 845, -863, 849, -859, 849, -857, 849, -840, 856, -826, 863, -822, 853, -812, 834, -813, 831, -811, 840, -809, 836, -804, 848, -796, 845, -790, 847, -787, 856, -787, 859, -774, 865, -784, 877, -782, 885, -775, 888, -790)
 
 [connection signal="body_entered" from="items/StaticBody2D3/Area2D" to="." method="_on_area_2d_body_entered"]
