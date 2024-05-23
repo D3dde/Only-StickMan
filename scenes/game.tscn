@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://cnd3cdrboypll"]
+[gd_scene load_steps=33 format=3 uid="uid://cnd3cdrboypll"]
 
 [ext_resource type="PackedScene" uid="uid://bal334tylhqtu" path="res://scenes/map.tscn" id="1_3mo61"]
 [ext_resource type="PackedScene" uid="uid://b5p6v0fuwhqtb" path="res://scenes/character.tscn" id="1_etlkc"]
@@ -22,6 +22,7 @@
 [ext_resource type="Texture2D" uid="uid://1goyqshp830b" path="res://asset/items/mountain.png" id="17_hjvhf"]
 [ext_resource type="Script" path="res://scenes/Area2D3.gd" id="19_rlw2u"]
 [ext_resource type="Script" path="res://scenes/Record.gd" id="21_fd7qp"]
+[ext_resource type="Texture2D" uid="uid://d4hqsl7ge1u2j" path="res://asset/items/start.png" id="23_mj7y3"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_nk5co"]
 texture = ExtResource("3_1ub6h")
@@ -290,6 +291,7 @@ offset_top = -1504.79
 offset_right = 3653.03
 offset_bottom = -1466.79
 script = ExtResource("15_vumq7")
+metadata/_edit_use_anchors_ = true
 
 [node name="Minutes" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
@@ -300,6 +302,7 @@ offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Seconds" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
@@ -310,6 +313,7 @@ offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Msecs" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
@@ -320,6 +324,7 @@ offset_bottom = 38.0
 text = "000"
 horizontal_alignment = 2
 vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="UIstatic/CanvasLayer/Panel"]
 layout_mode = 0
@@ -328,6 +333,7 @@ offset_top = -2.0
 offset_right = 61.0
 offset_bottom = 21.0
 text = "current"
+metadata/_edit_use_anchors_ = true
 
 [node name="Area2D" type="Area2D" parent="UIstatic/CanvasLayer"]
 collision_mask = 2
@@ -356,6 +362,7 @@ offset_top = -1546.79
 offset_right = 3653.03
 offset_bottom = -1508.79
 script = ExtResource("21_fd7qp")
+metadata/_edit_use_anchors_ = true
 
 [node name="Minutes" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
@@ -366,6 +373,7 @@ offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Seconds" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
@@ -376,6 +384,7 @@ offset_bottom = 38.0
 text = "00:"
 horizontal_alignment = 2
 vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Msecs" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
@@ -386,6 +395,7 @@ offset_bottom = 38.0
 text = "000"
 horizontal_alignment = 2
 vertical_alignment = 2
+metadata/_edit_use_anchors_ = true
 
 [node name="Label" type="Label" parent="UIstatic/CanvasLayer/Record"]
 layout_mode = 0
@@ -394,6 +404,13 @@ offset_top = -2.0
 offset_right = 61.0
 offset_bottom = 21.0
 text = "record"
+metadata/_edit_use_anchors_ = true
+
+[node name="Sprite2D" type="Sprite2D" parent="UIstatic"]
+z_index = -1
+position = Vector2(1440, -338)
+scale = Vector2(2, 2)
+texture = ExtResource("23_mj7y3")
 
 [connection signal="body_entered" from="ostacoli/items/StaticBody2D2/Area2D" to="ostacoli/items/StaticBody2D2/Area2D" method="_on_body_entered"]
 [connection signal="body_entered" from="ostacoli/items/StaticBody2D8/Area2D" to="ostacoli/items/StaticBody2D8/Area2D" method="_on_body_entered"]
